@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
+    <title>Ficha de Registro</title>
+</head>
+<body>
+    <h1 class="titulo">Criobank</h3>
+    <h3 class="subtitulo">Registro de Isolados</h3>
+    <form id="form">
+        <label for="nome" class="nome">Nome do Isolado</label>
+        <input type="text" name="nome" id="nome">
+        <label for="canister">Canister</label>
+        <input type="number" name="canister" id="canister" value="1">
+        <label for="caixa">Caixa</label>
+        <input type="number" name="caixa" id="caixa">
+        <label for="posicao">Posição</label>
+        <input type="number" name="posicao" id="posicao">
+        <label for="data">Data</label>
+        <input type="text" name="data" id="data">
+        <input type="submit" value="Guardar" id="submit">
+    </form>
+    <button id="btn-download">Baixar Ficheiro</button>
+    <div class="copyright">© Copyright - 2022 - E. Philimone</div>
+    <script src="./danfo_script.js"></script>
+</body>
+</html>
