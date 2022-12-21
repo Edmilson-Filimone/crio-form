@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Ficha de Registro</title>
 </head>
 <body>
     <h1 class="titulo">Criobank</h3>
     <h3 class="subtitulo">Registro de Isolados</h3>
+    <button class="btn-see-more" title="See Records"><i class="fa-solid fa-plus"></i></button>
     <form id="form">
         <label for="nome" class="nome">Nome do Isolado</label>
         <input type="text" name="nome" id="nome" required>
@@ -21,10 +23,16 @@
         <label for="posicao">Posição</label>
         <input type="number" name="posicao" id="posicao" required>
         <label for="data">Data</label>
-        <input type="date" name="data" id="data" min="2022-07-01" max="2022-12-25" required>
+        <input type="date" name="data" id="data" min="2022-07-01" max="2025-12-25" required>
         <input type="submit" value="Guardar" id="submit">
     </form>
     <button id="btn-download">Baixar Ficheiro</button>
+    <div class="card-conteiner">
+        <div class="card-notification">
+            <img class="img-notification" src="https://www.amanet.org/assets/1/6/certified-ico-about.png" alt="#">
+            <span class="text-notification">Salvo</span>
+        </div>
+    </div>
     <div class="copyright">© Copyright - 2022 - E. Philimone</div>
     <script src="./danfo_script.js"></script>
 </body>
