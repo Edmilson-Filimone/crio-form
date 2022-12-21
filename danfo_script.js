@@ -25,7 +25,7 @@ list.classList.add("list-style");
 let listTitle = document.createElement('h3')
 listTitle.classList.add('subtitulo')
 listTitle.classList.add("list-title")
-listTitle.innerText = "Lista de Regitros"
+listTitle.innerText = "Lista de Registros"
 list.append(listTitle)
 painel.classList.add("display-none");
 painel.append(list);
