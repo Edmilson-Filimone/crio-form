@@ -26,6 +26,10 @@ body {
    
 }
 
+.btn-see-more:hover{
+  filter: contrast(.7);
+  cursor: pointer;
+}
 
 .titulo {
   padding: 40px 20px 0px;
@@ -74,6 +78,12 @@ input {
   background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
 }
 
+#submit:hover{
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 #btn-download {
   font-weight: 800;
   padding: 5px;
@@ -83,6 +93,12 @@ input {
   border-radius: 8px;
   background-color: #fee140;
   background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
+}
+
+#btn-download:hover{
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .subtitulo::before {
@@ -152,6 +168,22 @@ input {
     transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
+.btn-delete-style{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  color: white;
+  border: none;
+  background: #cb2d3e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-delete-style:hover{
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
 .rotate{
     transform: rotate(45deg);
 }
@@ -168,7 +200,14 @@ input {
 }
 
 .list-style li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 8px 0px;
+}
+
+.list-style li:hover{
+  background-color: rgba(38, 137, 86, 0.327);
 }
 
 .list-title{

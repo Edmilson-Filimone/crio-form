@@ -22,11 +22,11 @@ painel.append(placeholder);
 
 let list = document.createElement("ol");
 list.classList.add("list-style");
-let listTitle = document.createElement('h3')
-listTitle.classList.add('subtitulo')
-listTitle.classList.add("list-title")
-listTitle.innerText = "Lista de Registros"
-list.append(listTitle)
+let listTitle = document.createElement("h3");
+listTitle.classList.add("subtitulo");
+listTitle.classList.add("list-title");
+listTitle.innerText = "Lista de Registros";
+list.append(listTitle);
 painel.classList.add("display-none");
 painel.append(list);
 body.append(painel);
@@ -36,13 +36,36 @@ function savePainel() {
   if (painel.contains(placeholder)) {
     painel.removeChild(placeholder);
   }
+
   let li = document.createElement("li");
+  let span = document.createElement("span");
+
+  let btn_delete = document.createElement("button");
+  btn_delete.innerHTML = `<i class="fa-solid fa-x"></i>`;
+  btn_delete.classList.add('btn-delete-style')
+
+  btn_delete.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (confirm("Tem certeza que quer apagar?")) {
+
+      deleteData(btn_delete.parentElement)
+    }
+  });
 
   let data_iterate = dfd.toJSON(dataframe);
-  for (let item of data_iterate) {
+  data_iterate.forEach((item, index) => {
     li.innerText = `Nome: ${item.nome} - Posição: C${item.canister}-C${item.caixa}-P${item.posicao}`;
+    li.id = `id-${index}`; //passando um id para a li, que sera usado pela btn-delete para remover o elemento
+    li.append(span);
+    li.append(btn_delete);
     list.append(li);
-  }
+  });
+}
+
+//funcao para deletar regitros e remover do painel
+function deleteData(element) {
+  console.log(element);
+  element.style.display = "none";
 }
 
 //Funcao para salvar e guardar como planilha
